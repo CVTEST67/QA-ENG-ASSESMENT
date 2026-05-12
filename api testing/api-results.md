@@ -1,6 +1,5 @@
 # API Testing Report - JSONPlaceholder
-
-Base URL: https://jsonplaceholder.typicode.com
+https://jsonplaceholder.typicode.com
 
 ---
 
