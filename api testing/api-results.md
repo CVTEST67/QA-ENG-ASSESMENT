@@ -1,82 +1,59 @@
-# API Testing Report - JSONPlaceholder
+# API Testing 
 https://jsonplaceholder.typicode.com
 
 ---
 
-## API-01: GET /users
+## GET /users
 
-**Method:** GET  
-**Endpoint:** /users  
-**Expected Status:** 200 OK  
-**Actual Status:** 200 OK  
+Method: GET  
+Expected: 200 OK  
+Actual: 200 OK  
 
-**Response Type:** Array of users (10 records)  
+This endpoint returns a list of users. The response contained 10 user records with complete details such as name, email, address, and company information.
 
-**Analysis:**  
-API returns a list of users in valid JSON format with complete user details.
+Overall, the API behaved as expected.
 
-**Status:** Pass  
+Status: Pass  
 
 ---
 
-## API-02: GET /users/1
+## GET /users/1
 
-**Method:** GET  
-**Endpoint:** /users/1  
-**Expected Status:** 200 OK  
-**Actual Status:** 200 OK  
+Method: GET  
+Expected: 200 OK  
+Actual: 200 OK  
 
-**Response:**
-{
-  "id": 1,
-  "name": "Leanne Graham",
-  "username": "Bret",
-  "email": "Sincere@april.biz"
-}
+The API returned a single user object correctly. All expected fields like name, username, and email were present in the response.
 
-**Analysis:**  
-API successfully retrieves a single user object with correct structure.
-
-**Status:** Pass  
+Status: Pass  
 
 ---
 
-## API-03: POST /posts
+## POST /posts
 
-**Method:** POST  
-**Endpoint:** /posts  
+Method: POST  
 
-**Request Body:**
+Request body:
 {
   "title": "QA Test Post",
   "body": "Testing API POST request",
   "userId": 1
 }
 
-**Expected Status:** 201 Created  
-**Actual Status:** 201 Created  
+Expected: 201 Created  
+Actual: 201 Created  
 
-**Response:**
-{
-  "title": "QA Test Post",
-  "body": "Testing API POST request",
-  "userId": 1,
-  "id": 101
-}
+The API successfully accepted the request and returned a created object with an ID. Since this is a mock API, no real data is stored and no validation is enforced.
 
-**Analysis:**  
-API accepts valid POST request and returns created resource. No validation enforced (mock API behavior).
-
-**Status:** Pass  
+Status: Pass  
 
 ---
 
-## API-04: PUT /posts/1
+## PUT /posts/1
 
-**Method:** PUT  
-**Endpoint:** /posts/1  
+Method: PUT  
 
-**Request Body:**
+Request body:
 {
   "id": 1,
   "title": "Updated QA Title",
@@ -84,63 +61,51 @@ API accepts valid POST request and returns created resource. No validation enfor
   "userId": 1
 }
 
-**Expected Status:** 200 OK  
-**Actual Status:** 200 OK  
+Expected: 200 OK  
+Actual: 200 OK  
 
-**Response:**
-{
-  "id": 1,
-  "title": "Updated QA Title",
-  "body": "This post was updated during API testing",
-  "userId": 1
-}
+The API successfully returned the updated object. The changes are reflected in the response as expected.
 
-**Analysis:**  
-API successfully updates existing resource and returns modified data.
-
-**Status:** Pass  
+Status: Pass  
 
 ---
 
-## EDGE CASE 1: GET /users/9999
+## Edge Case - GET /users/9999
 
-**Expected:** 404 Not Found  
-**Actual:** 404 Not Found  
+Expected: 404 Not Found  
+Actual: 404 Not Found  
 
-**Analysis:**  
-Correct handling of invalid user ID.
+The API correctly handled an invalid user ID and returned a 404 response.
 
-**Status:** Pass  
-
----
-
-## EDGE CASE 2: POST /posts with empty body
-
-**Request Body:** {}
-
-**Expected:** 400 Bad Request  
-**Actual:** 201 Created  
-
-**Analysis:**  
-API does not validate input (mock behavior).
-
-**Status:** Pass  
+Status: Pass  
 
 ---
 
-## EDGE CASE 3: PUT /posts/9999
+## Edge Case - POST with empty body
 
-**Request Body:**
+Request body: {}
+
+Expected: 400 Bad Request  
+Actual: 201 Created  
+
+The API still accepted the request and returned a success response. This shows that no validation rules are enforced, which is expected for this mock API.
+
+Status: Pass  
+
+---
+
+## Edge Case - PUT /posts/9999
+
+Request body:
 {
   "title": "Edge Case Update",
   "body": "Testing update on non-existent resource",
   "userId": 1
 }
 
-**Expected:** 404 Not Found  
-**Actual:** 500 Internal Server Error + invalid JSON  
+Expected: 404 Not Found  
+Actual: 500 Internal Server Error  
 
-**Analysis:**  
-API fails to properly handle invalid resource updates.
+The API failed to properly handle an update on a non-existent resource and returned a server error instead of a proper 404 response.
 
-**Status:** Fail (Edge Case Observed)
+Status: Fail  
