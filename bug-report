@@ -1,6 +1,6 @@
 # Bug Reports - SauceDemo
 
-## BR-01: Checkout proceeds with empty cart
+## BR-01: Checkout Proceeds with Empty Cart
 
 **Severity:** High
 
@@ -15,11 +15,15 @@
 6. Click "Continue"
 7. Click "Finish"
 
-### Expected Result:
+**Expected Result:**  
 System should prevent checkout when cart is empty and display an appropriate validation message.
 
-### Actual Result:
+**Actual Result:**  
 System allows checkout process to complete even when no products are added to cart.
 
-### Impact:
+**Impact:**  
 Users are able to complete invalid checkout flow with no selected products.
+
+**Status:** Fail
+
+---
