@@ -14,7 +14,7 @@
 
 **Evidence:**
 
-![Add to Cart](screenshots/ADD TO CART.png)
+![Add to Cart](screenshots/add-to-cart.png)
 
 ---
 
@@ -33,7 +33,7 @@
 
 **Evidence:**
 
-![View Cart](screenshots/VIEW CART_PAGE.png)
+![View Cart](screenshots/view-cart-page.png)
 
 ---
 
@@ -72,7 +72,7 @@
 
 **Evidence:**
 
-![Checkout Success](screenshots/CHECKOUT SUCCESS.png)
+![Checkout Success](screenshots/checkout_success.png)
 
 ---
 
@@ -112,4 +112,4 @@
 
 **Evidence:**
 
-![Empty Cart Checkout](screenshots/EMPTY CART CHECKOUT BUG.png)
+![Empty Cart Checkout](screenshots/empty-cart-checkout-bug.png)
