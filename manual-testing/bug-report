@@ -1,12 +1,12 @@
-# Bug Reports - SauceDemo
+ Bug Reports - SauceDemo
 
-## BR-01: Checkout Proceeds with Empty Cart
+ BR-01: Checkout Proceeds with Empty Cart
 
-**Severity:** High
+Severity: High
 
-**Environment:** https://www.saucedemo.com/
+Environment: https://www.saucedemo.com/
 
-### Steps to Reproduce:
+ Steps to Reproduce:
 1. Login with valid credentials
 2. Do not add any product to cart
 3. Click cart icon
@@ -15,15 +15,15 @@
 6. Click "Continue"
 7. Click "Finish"
 
-**Expected Result:**  
+Expected Result: 
 System should prevent checkout when cart is empty and display an appropriate validation message.
 
-**Actual Result:**  
+Actual Result:  
 System allows checkout process to complete even when no products are added to cart.
 
-**Impact:**  
+Impact: 
 Users are able to complete invalid checkout flow with no selected products.
 
-**Status:** Fail
+Status: Fail
 
----
+
