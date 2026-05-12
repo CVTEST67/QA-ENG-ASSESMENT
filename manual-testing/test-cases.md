@@ -1,4 +1,5 @@
  Manual Test Cases - SauceDemo
+
  
 TC-01: Add to Cart
 
@@ -11,7 +12,9 @@ Steps:
  Expected Result: Cart icon shows item count = 1
  
  Actual Result: Cart icon shows item count = 1
+ 
  Status: Pass
+
 
 TC-02: View cart contents
 
@@ -23,8 +26,11 @@ Steps:
   3. Click cart icon
      
  Expected Result: Selected product should be displayed in cart page
+ 
  Actual Result: Selected product is displayed in cart page
+ 
  Status: Pass
+
 
  TC-03: Remove item from cart
  
@@ -41,6 +47,7 @@ Steps:
  Actual Result: Product is removed and cart is empty
 
  Status: Pass
+
 
  TC-04: Complete checkout process
  
@@ -61,6 +68,7 @@ Steps:
 
  Status: Pass
 
+
  TC-05: Checkout with empty fields 
  
  Precondition: Product is in cart
@@ -78,6 +86,7 @@ Steps:
  Actual Result: Validation error message is shown
 
  Status: Pass
+
 
  TC-06: Checkout with empty cart
  
