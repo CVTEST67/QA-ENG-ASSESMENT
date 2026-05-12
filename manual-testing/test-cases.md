@@ -8,11 +8,13 @@
 1. Login with valid credentials
 2. Click "Add to cart" on any product
 
-**Expected Result:** Cart icon shows item count = 1
+**Expected Result:** Cart icon shows item count = 1  
+**Actual Result:** Cart icon shows item count = 1  
+**Status:** Pass  
 
-**Actual Result:** Cart icon shows item count = 1
+**Evidence:**
 
-**Status:** Pass
+![Add to Cart](screenshots/add-to-cart.png)
 
 ---
 
@@ -25,11 +27,13 @@
 2. Click "Add to cart" on any product
 3. Click cart icon
 
-**Expected Result:** Selected product should be displayed in cart page
+**Expected Result:** Selected product should be displayed in cart page  
+**Actual Result:** Selected product is displayed in cart page  
+**Status:** Pass  
 
-**Actual Result:** Selected product is displayed in cart page
+**Evidence:**
 
-**Status:** Pass
+![View Cart](screenshots/view-cart_page.png)
 
 ---
 
@@ -43,11 +47,9 @@
 3. Click cart icon
 4. Click "Remove"
 
-**Expected Result:** Product should be removed and cart is empty
-
-**Actual Result:** Product is removed and cart is empty
-
-**Status:** Pass
+**Expected Result:** Product should be removed and cart is empty  
+**Actual Result:** Product is removed and cart is empty  
+**Status:** Pass  
 
 ---
 
@@ -64,11 +66,13 @@
 6. Click "Continue"
 7. Click "Finish"
 
-**Expected Result:** Order confirmation page should be displayed with checkout details
+**Expected Result:** Order confirmation page should be displayed with checkout details  
+**Actual Result:** Order confirmation page is displayed along with checkout details  
+**Status:** Pass  
 
-**Actual Result:** Order confirmation page is displayed along with checkout details
+**Evidence:**
 
-**Status:** Pass
+![Checkout Success](screenshots/checkout-success.png)
 
 ---
 
@@ -84,11 +88,9 @@
 5. Leave First Name, Last Name, and Zip/Postal Code fields empty
 6. Click "Continue"
 
-**Expected Result:** Validation error message should be shown
-
-**Actual Result:** Validation error message is shown
-
-**Status:** Pass
+**Expected Result:** Validation error message should be shown  
+**Actual Result:** Validation error message is shown  
+**Status:** Pass  
 
 ---
 
@@ -104,8 +106,10 @@
 5. Click "Continue"
 6. Click "Finish"
 
-**Expected Result:** Checkout should be prevented by the system and display a message indicating the cart is empty
+**Expected Result:** Checkout should be prevented by the system and display a message indicating the cart is empty  
+**Actual Result:** Checkout proceeds even with an empty cart  
+**Status:** Fail  
 
-**Actual Result:** Checkout proceeds even with an empty cart
+**Evidence:**
 
-**Status:** Fail
+![Empty Cart Checkout](screenshots/empty-cart-checkout.png)
