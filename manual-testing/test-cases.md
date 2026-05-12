@@ -1,6 +1,6 @@
  Manual Test Cases - SauceDemo
 
- 
+
 TC-01: Add to Cart
 
 Precondition: User is Logged In
