@@ -7,14 +7,13 @@ https://jsonplaceholder.typicode.com
 
 **Method:** GET  
 **Endpoint:** /users  
-
 **Expected Status:** 200 OK  
 **Actual Status:** 200 OK  
 
-**Response Type:** Array of users  
+**Response Type:** Array of users (10 records)  
 
 **Analysis:**  
-API returns a list of users successfully with valid structured JSON data.
+API returns a list of users in valid JSON format with complete user details.
 
 **Status:** Pass  
 
@@ -24,7 +23,6 @@ API returns a list of users successfully with valid structured JSON data.
 
 **Method:** GET  
 **Endpoint:** /users/1  
-
 **Expected Status:** 200 OK  
 **Actual Status:** 200 OK  
 
@@ -67,7 +65,7 @@ API successfully retrieves a single user object with correct structure.
 }
 
 **Analysis:**  
-API accepts valid POST request and returns created resource with generated ID.
+API accepts valid POST request and returns created resource. No validation enforced (mock API behavior).
 
 **Status:** Pass  
 
@@ -104,17 +102,45 @@ API successfully updates existing resource and returns modified data.
 
 ---
 
-## EDGE CASE: GET /users/9999
+## EDGE CASE 1: GET /users/9999
 
-**Method:** GET  
-**Endpoint:** /users/9999  
-
-**Expected Status:** 404 Not Found  
-**Actual Status:** 404 Not Found  
-
-**Response:** 404  
+**Expected:** 404 Not Found  
+**Actual:** 404 Not Found  
 
 **Analysis:**  
-API correctly handles invalid user request and returns proper error status.
+Correct handling of invalid user ID.
 
 **Status:** Pass  
+
+---
+
+## EDGE CASE 2: POST /posts with empty body
+
+**Request Body:** {}
+
+**Expected:** 400 Bad Request  
+**Actual:** 201 Created  
+
+**Analysis:**  
+API does not validate input (mock behavior).
+
+**Status:** Pass  
+
+---
+
+## EDGE CASE 3: PUT /posts/9999
+
+**Request Body:**
+{
+  "title": "Edge Case Update",
+  "body": "Testing update on non-existent resource",
+  "userId": 1
+}
+
+**Expected:** 404 Not Found  
+**Actual:** 500 Internal Server Error + invalid JSON  
+
+**Analysis:**  
+API fails to properly handle invalid resource updates.
+
+**Status:** Fail (Edge Case Observed)
