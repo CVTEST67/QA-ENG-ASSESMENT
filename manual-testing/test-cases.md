@@ -72,7 +72,7 @@
 
 **Evidence:**
 
-![Checkout Success](screenshots/checkout_success.png)
+![Checkout Success](screenshots/checkout-success.png)
 
 ---
 
